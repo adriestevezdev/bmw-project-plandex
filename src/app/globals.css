@@ -20,6 +20,9 @@
   --primary-dark: var(--bmw-dark-blue);
   --secondary: var(--bmw-light-gray);
   --accent: var(--bmw-blue);
+  --footer-link-hover-color: var(--bmw-white);
+  --bmw-very-light-blue: #66a3ff;
+  --bmw-very-light-blue-hover: #99c2ff;
 }
 
 @theme inline {
@@ -34,6 +37,34 @@
     --background: var(--bmw-dark-gray);
     --foreground: var(--bmw-white);
     --secondary: var(--bmw-dark-blue);
+    --primary: var(--bmw-very-light-blue);
+    --primary-hover: var(--bmw-very-light-blue-hover);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--foreground);
+  }
+
+  /* Dark Mode: Navbar initial state text color fix */
+  /* Targets nav when it has 'bg-transparent' (initial state) */
+  nav[class*="bg-transparent"] > div > div > a > span[class*="text-bmw-dark-gray"], /* For "BMW Fan" title */
+  nav[class*="bg-transparent"] > div > div > div[class*="md:flex"] > a[class*="text-bmw-dark-gray"], /* For desktop nav links */
+  nav[class*="bg-transparent"] > div > div > button[class*="md:hidden"] > svg[class*="text-bmw-dark-gray"] /* For mobile menu icon */
+  {
+    color: var(--bmw-white) !important;
+  }
+
+  /* Adjust text shadow for the now white text on transparent nav in dark mode */
+  /* These selectors target elements that had a dark text shadow applied by JS/Tailwind */
+  nav[class*="bg-transparent"] > div > div > a > span[class*="text-bmw-dark-gray"][class*="shadow-"],
+  nav[class*="bg-transparent"] > div > div > div[class*="md:flex"] > a[class*="text-bmw-dark-gray"][class*="shadow-"]
+  {
+    text-shadow: 0px 0px 5px rgba(0,0,0,0.5) !important; /* Black shadow for white text */
+  }
+
+  nav[class*="bg-transparent"] > div > div > button[class*="md:hidden"] > svg[class*="text-bmw-dark-gray"][class*="drop-shadow"]
+  {
+    filter: drop-shadow(0px 0px 2px rgba(0,0,0,0.5)) !important; /* Black shadow for white icon */
   }
 }
 

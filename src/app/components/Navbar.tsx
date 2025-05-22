@@ -63,21 +63,21 @@ const Navbar = () => {
                 <path d="M25 25 A25 25 0 0 1 25 75 A25 25 0 0 1 75 75 A25 25 0 0 1 75 25 A25 25 0 0 1 25 25" fill="#0066B1" />
               </svg>
             </div>
-            <span className={`font-bold text-xl ${isScrolled ? 'text-white' : 'text-bmw-dark-gray'}`}>BMW Fan</span>
+            <span className={`font-bold text-xl ${isScrolled ? 'text-white' : 'text-bmw-dark-gray shadow-[0px_0px_5px_rgba(0,0,0,0.7)]'}`}>BMW Fan</span>
           </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <Link href="/" className={`nav-link ${isScrolled ? 'text-white' : 'text-bmw-dark-gray'} hover:text-bmw-blue transition-colors`}>
+            <Link href="/" className={`nav-link ${isScrolled ? 'text-white' : 'text-bmw-dark-gray shadow-[0px_0px_5px_rgba(0,0,0,0.7)]'} hover:text-bmw-blue transition-colors`}>
               Home
             </Link>
-            <Link href="/models" className={`nav-link ${isScrolled ? 'text-white' : 'text-bmw-dark-gray'} hover:text-bmw-blue transition-colors`}>
+            <Link href="/models" className={`nav-link ${isScrolled ? 'text-white' : 'text-bmw-dark-gray shadow-[0px_0px_5px_rgba(0,0,0,0.7)]'} hover:text-bmw-blue transition-colors`}>
               Models
             </Link>
-            <Link href="/gallery" className={`nav-link ${isScrolled ? 'text-white' : 'text-bmw-dark-gray'} hover:text-bmw-blue transition-colors`}>
+            <Link href="/gallery" className={`nav-link ${isScrolled ? 'text-white' : 'text-bmw-dark-gray shadow-[0px_0px_5px_rgba(0,0,0,0.7)]'} hover:text-bmw-blue transition-colors`}>
               Gallery
             </Link>
-            <Link href="/about" className={`nav-link ${isScrolled ? 'text-white' : 'text-bmw-dark-gray'} hover:text-bmw-blue transition-colors`}>
+            <Link href="/about" className={`nav-link ${isScrolled ? 'text-white' : 'text-bmw-dark-gray shadow-[0px_0px_5px_rgba(0,0,0,0.7)]'} hover:text-bmw-blue transition-colors`}>
               History
             </Link>
             <a 
@@ -98,7 +98,7 @@ const Navbar = () => {
           >
             <svg 
               xmlns="http://www.w3.org/2000/svg" 
-              className={`h-6 w-6 ${isScrolled ? 'text-white' : 'text-bmw-dark-gray'}`} 
+              className={`h-6 w-6 ${isScrolled ? 'text-white' : 'text-bmw-dark-gray drop-shadow-[0px_0px_3px_rgba(0,0,0,0.7)]'}`} 
               fill="none" 
               viewBox="0 0 24 24" 
               stroke="currentColor"
